@@ -73,7 +73,7 @@ public class Empleado {
 		}else {
 			//Declaracion e inicio de variables
 			double auxTrans = 106454;
-			double valorH =0;
+			int valorH =0;
 			double valorHExtra = 0;
 			double salud = 0;
 			double pension = 0;
@@ -85,7 +85,7 @@ public class Empleado {
 			for (Empleado empleado : empleados) { // inicio de foreach
 				
 				// valor hora = salario / (30 dias * 8horas = 240)
-				valorH = empleado.getSalario() / 240.0; 
+				valorH = empleado.getSalario() / 240; 
 				
 				// hora extra 
 				valorHExtra = valorH * empleado.getHorasExtra();
@@ -112,7 +112,7 @@ public class Empleado {
 				
 				//se agrega al ArrayList<Double> pagoQuincenal cada salario de cada trabajador	
 
-				pagoQuincenal.add((double)((int)totalQuincena));
+				pagoQuincenal.add(totalQuincena);
 				
 			}// fin foreach
 			
